@@ -1,0 +1,38 @@
+/* CSS Customizado para o Carrossel CSS-Only */
+        /* Esconde os radio buttons */
+        .carousel-radio {
+            display: none;
+        }
+
+        /* Define a transição no wrapper dos slides */
+        .slides-wrapper {
+            transition: transform 0.5s ease-in-out;
+        }
+
+        /* Lógica de mudança de slide */
+        #slide1:checked ~ .slides-wrapper {
+            transform: translateX(0%);
+        }
+        #slide2:checked ~ .slides-wrapper {
+            transform: translateX(-100%);
+        }
+        /* Adicione mais regras como esta para mais slides: */
+        /* #slide3:checked ~ .slides-wrapper { transform: translateX(-200%); } */
+        /* #slide4:checked ~ .slides-wrapper { transform: translateX(-300%); } */
+
+
+        /* Estiliza o indicador ativo */
+        #slide1:checked ~ .carousel-controls label[for="slide1"],
+        #slide2:checked ~ .carousel-controls label[for="slide2"]
+        /* , #slide3:checked ~ .carousel-controls label[for="slide3"] */
+        {
+            background-color: #34d399; /* emerald-400 */
+        }
+
+        /* Fonte padrão e monospace para código/taglines */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .font-code {
+             font-family: 'Source Code Pro', monospace;
+        }

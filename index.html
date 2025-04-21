@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Siga Saudável - Saúde e Bem-estar para Devs</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Code+Pro:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body class="bg-gray-900 text-gray-100">
+
+    <!-- Header / Navbar -->
+    <header class="bg-gray-800 shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div>
+                <a href="#" class="text-2xl font-bold text-emerald-400 hover:text-emerald-300 transition duration-300">
+                    Siga Saudável <span class="text-xs font-code">// Seu `commit` de bem-estar</span>
+                </a>
+            </div>
+            <div class="hidden md:flex space-x-6">
+                <a href="#frontend" class="text-gray-300 hover:text-emerald-400 transition duration-300">💅 Front-end</a>
+                <a href="#backend" class="text-gray-300 hover:text-emerald-400 transition duration-300">🧠 Back-end</a>
+                <a href="#networking" class="text-gray-300 hover:text-emerald-400 transition duration-300">🍻 Networking</a>
+                <a href="#data" class="text-gray-300 hover:text-emerald-400 transition duration-300">📊 /data</a>
+            </div>
+            <!-- Botão para menu mobile (requer JS para funcionar de verdade) -->
+            <div class="md:hidden">
+                <button class="text-gray-300 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+        </nav>
+        <!-- Menu Mobile (requer JS para mostrar/esconder) -->
+        <div class="md:hidden hidden bg-gray-800 px-6 pb-4 space-y-2">
+             <a href="#frontend" class="block text-gray-300 hover:text-emerald-400 transition duration-300">💅 Front-end</a>
+             <a href="#backend" class="block text-gray-300 hover:text-emerald-400 transition duration-300">🧠 Back-end</a>
+             <a href="#networking" class="block text-gray-300 hover:text-emerald-400 transition duration-300">🍻 Networking</a>
+             <a href="#data" class="block text-gray-300 hover:text-emerald-400 transition duration-300">📊 /data</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Seção Carrossel CSS-Only -->
+        <section class="bg-gray-800 py-12 md:py-20">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl font-bold mb-8 text-emerald-400">Últimos `Updates` de Bem-Estar</h2>
+
+                <!-- Container do Carrossel -->
+                <div class="relative max-w-4xl mx-auto overflow-hidden rounded-lg shadow-xl bg-gray-700">
+
+                    <!-- Inputs de Rádio Escondidos -->
+                    <input type="radio" name="carousel-slide" id="slide1" class="carousel-radio" checked>
+                    <input type="radio" name="carousel-slide" id="slide2" class="carousel-radio">
+                    <!-- Adicione mais inputs para mais slides -->
+                    <!-- <input type="radio" name="carousel-slide" id="slide3" class="carousel-radio"> -->
+
+                    <!-- Wrapper dos Slides (O que vai se mover) -->
+                    <div class="flex slides-wrapper">
+
+                        <!-- Slide 1 -->
+                        <div class="w-full flex-shrink-0">
+                            <div class="md:flex">
+                                <div class="md:flex-shrink-0">
+                                    <img class="h-48 w-full object-cover md:h-full md:w-64" src="./imagens/xícaras de café.webp" alt="Xícaras de café ao lado de um laptop com código">
+                                </div>
+                                <div class="p-8 text-left">
+                                    <div class="uppercase tracking-wide text-sm text-emerald-400 font-semibold">☕ Back-end</div>
+                                    <a href="#" class="block mt-1 text-lg leading-tight font-medium text-white hover:underline">Refatorando sua Rotina: O Ciclo Ideal de Cafeína para Devs</a>
+                                    <p class="mt-2 text-gray-400">Será que existe um número mágico de xícaras de café pra não bugar seu próprio sistema? Desvendamos a API da cafeína e como otimizar seus `await fetch(coffee)`. Leia mais para evitar `Error 418: I'm a teapot`.</p>
+                                    <a href="#" class="mt-4 inline-block bg-emerald-500 hover:bg-emerald-600 text-gray-900 font-semibold py-2 px-4 rounded transition duration-300">
+                                        Ler Artigo Completo →
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Fim Slide 1 -->
+
+                        <!-- Slide 2 -->
+                        <div class="w-full flex-shrink-0">
+                             <div class="md:flex">
+                                <div class="md:flex-shrink-0">
+                                    <img class="h-48 w-full object-cover md:h-full md:w-64" src="./imagens/Benefícios do Pilates.webp" alt="Esquema de boa postura na cadeira de escritório">
+                                </div>
+                                <div class="p-8 text-left">
+                                    <div class="uppercase tracking-wide text-sm text-cyan-400 font-semibold">💅 Front-end</div>
+                                    <a href="#" class="block mt-1 text-lg leading-tight font-medium text-white hover:underline">Debugando sua Postura: Evite o `Error 503: Service Unavailable` da sua Coluna</a>
+                                    <p class="mt-2 text-gray-400">Passar horas buildando pode `compilar` uma dor nas costas. Aprenda a configurar seu `ambiente` ergonômico e a fazer `commits` de alongamento para manter sua `stack` física funcionando sem `downtime`.</p>
+                                    <a href="#" class="mt-4 inline-block bg-cyan-500 hover:bg-cyan-600 text-gray-900 font-semibold py-2 px-4 rounded transition duration-300">
+                                        Ler Artigo Completo →
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Fim Slide 2 -->
+
+                         <!-- Adicione mais slides aqui -->
+
+                    </div>
+
+                    <!-- Controles do Carrossel (Labels dos Radios) -->
+                    <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2 carousel-controls">
+                        <label for="slide1" class="block w-3 h-3 bg-gray-500 rounded-full cursor-pointer hover:bg-gray-400 transition-colors duration-300"></label>
+                        <label for="slide2" class="block w-3 h-3 bg-gray-500 rounded-full cursor-pointer hover:bg-gray-400 transition-colors duration-300"></label>
+                        <!-- Adicione mais labels para mais slides -->
+                        <!-- <label for="slide3" class="block w-3 h-3 bg-gray-500 rounded-full cursor-pointer hover:bg-gray-400"></label> -->
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Seção Explicativa: Como o Site Funciona -->
+        <section id="como-funciona" class="py-16 bg-gray-900">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold text-center mb-12 text-emerald-400">Entenda Nossa Arquitetura de Conteúdo</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+                    <!-- Card Front-end -->
+                    <div id="frontend" class="bg-gray-800 p-6 rounded-lg shadow-lg border border-emerald-700/50 hover:border-emerald-600 transition transform hover:scale-[1.03] duration-300">
+                        <h3 class="text-2xl font-semibold mb-3 text-cyan-400">💅 Front-end</h3>
+                        <p class="text-gray-300 mb-4"> <!-- Parágrafo introdutório -->
+                            Aqui no ‘Front-end’, cuidamos da sua interface pessoal! Pense nisso como o CSS da sua vida. Vamos falar sobre:
+                        </p>
+                        <ul class="list-disc list-inside space-y-2 text-gray-300"> <!-- Lista não ordenada -->
+                            <li>
+                                Como <code class="bg-gray-700 px-1 rounded text-emerald-300 text-sm">deployar</code> um visual bacana e confortável.
+                            </li>
+                            <li>
+                                <code class="bg-gray-700 px-1 rounded text-emerald-300 text-sm">Refatorar</code> o corte de cabelo ou a barba.
+                            </li>
+                            <li>
+                                Escolher <code class="bg-gray-700 px-1 rounded text-emerald-300 text-sm">assets</code> como tatuagens e piercings.
+                            </li>
+                            <li>
+                                Dicas de estilo para não parecer que você acabou de sair de um <code class="bg-gray-700 px-1 rounded text-emerald-300 text-sm">merge conflict</code> na hora daquela call importante.
+                            </li>
+                        </ul>
+                        <p class="text-gray-300 mt-4"> <!-- Parágrafo final -->
+                            Afinal, a primeira impressão também conta, mesmo que seja pela webcam!”
+                        </p>
+                    </div>
+
+                    <!-- Card Back-end -->
+                    <div id="backend" class="bg-gray-800 p-6 rounded-lg shadow-lg border border-emerald-700/50 hover:border-emerald-600 transition transform hover:scale-[1.03] duration-300">
+                        <h3 class="text-2xl font-semibold mb-3 text-emerald-400">🧠 Back-end</h3>
+                        <p class="text-gray-300 mb-4"> <!-- Parágrafo introdutório -->
+                            Já no ‘Back-end’, focamos na lógica que faz tudo rodar por dentro. É o core do seu bem-estar! Vamos falar sobre:
+                        </p>
+                        <ul class="list-disc list-inside space-y-2 text-gray-300"> <!-- Lista não ordenada -->
+                            <li>
+                                Vamos <code class="bg-gray-700 px-1 rounded text-emerald-300 text-sm">debugar</code>a alimentação para otimizar sua energia (queries nutricionais!)..
+                            </li>
+                            <li>
+                                <code class="bg-gray-700 px-1 rounded text-emerald-300 text-sm">Configurar</code>sua infra física com exercícios e postura para evitar hardware failure (dores!).
+                            </li>
+                            <li>
+                                Gerenciar os processos mentais para lidar com estresse e burnout (API de saúde mental). 
+                            </li>
+                        </ul>
+                        
+                    </div>
+
+                    <!-- Card Networking -->
+                    <div id="networking" class="bg-gray-800 p-6 rounded-lg shadow-lg border border-emerald-700/50 hover:border-emerald-600 transition transform hover:scale-[1.03] duration-300">
+                        <h3 class="text-2xl font-semibold mb-3 text-amber-400">🍻 Networking</h3>
+                        <p class="text-gray-300 mb-4"> <!-- Primeiro Parágrafo -->
+                            A vida de dev não é só <code class="bg-gray-700 px-1 rounded text-emerald-300 text-sm">commits</code> e <code class="bg-gray-700 px-1 rounded text-emerald-300 text-sm">deployments</code> solitários na frente da tela! Sabemos que conectar com outros <code class="bg-gray-700 px-1 rounded text-emerald-300 text-sm">nodes</code> da rede (também conhecidos como “pessoas”) é fundamental.
+                        </p>
+                        <p class="text-gray-300 mb-4"> <!-- Segundo Parágrafo -->
+                            Esta seção é o seu <code class="bg-gray-700 px-1 rounded text-emerald-300 text-sm">endpoint</code> para descobrir eventos relevantes onde a comunidade dev se encontra para colocar o papo em dia, trocar <code class="bg-gray-700 px-1 rounded text-emerald-300 text-sm">logs</code> de experiências, e quem sabe, iniciar aquela <code class="bg-gray-700 px-1 rounded text-emerald-300 text-sm">collab</code> para um projeto paralelo (ou só reclamar do último <code class="bg-gray-700 px-1 rounded text-emerald-300 text-sm">bug</code> mesmo).
+                        </p>
+                        <p class="text-gray-300"> <!-- Terceiro Parágrafo -->
+                            Fique ligado nas nossas dicas de meetups, conferências, workshops, hackathons e até mesmo eventos esportivos para usar os músculos e não apenas os neurônios.
+                        </p>
+                    </div>
+
+                    <!-- Card /data -->
+                    <div id="data" class="bg-gray-800 p-6 rounded-lg shadow-lg border border-emerald-700/50 hover:border-emerald-600 transition transform hover:scale-[1.03] duration-300">
+                        <h3 class="text-2xl font-semibold mb-3 text-violet-400">📊 /data</h3>
+                        <p class="text-gray-300">Nossa seção de `analytics` curiosos. Quantas linhas de código por litro de café? Qual o tempo médio pra `deploy` de uma barba hipster? Dados inúteis (ou não) pra devs curiosos. Métricas divertidas sobre nosso universo.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 border-t border-gray-700 mt-16">
+        <div class="container mx-auto px-6 py-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm mb-4 md:mb-0">
+                    © 2025 Siga Saudável. Feito com <span class="text-red-500"><3</span> e muito café. // v1.0.1
+                </p>
+                <div class="flex space-x-4">
+                     <a href="#" class="text-gray-400 hover:text-emerald-400 transition duration-300" aria-label="Twitter">
+                         <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"> <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0023.953 4.57z"></path></svg>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-emerald-400 transition duration-300" aria-label="LinkedIn">
+                         <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"> <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path> </svg>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-emerald-400 transition duration-300" aria-label="GitHub">
+                         <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.009-.868-.013-1.703-2.782.604-3.369-1.342-3.369-1.342-.454-1.157-1.11-1.465-1.11-1.465-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.087.636-1.338-2.22-.252-4.555-1.112-4.555-4.943 0-1.091.39-1.984 1.029-2.685-.103-.254-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.548 9.548 0 0112 6.836c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.202 2.393.1 2.647.64.701 1.028 1.594 1.028 2.685 0 3.841-2.338 4.687-4.566 4.935.359.307.678.915.678 1.846 0 1.33-.012 2.403-.012 2.728 0 .267.18.577.688.48C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd"></path></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
