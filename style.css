@@ -1,38 +1,60 @@
-/* CSS Customizado para o Carrossel CSS-Only */
-        /* Esconde os radio buttons */
-        .carousel-radio {
-            display: none;
-        }
+/* CSS Customizado para os Carrosséis CSS-Only */
 
-        /* Define a transição no wrapper dos slides */
-        .slides-wrapper {
-            transition: transform 0.5s ease-in-out;
-        }
+/* Esconde os radio buttons (geral para todos) */
+.carousel-radio {
+    display: none;
+}
 
-        /* Lógica de mudança de slide */
-        #slide1:checked ~ .slides-wrapper {
-            transform: translateX(0%);
-        }
-        #slide2:checked ~ .slides-wrapper {
-            transform: translateX(-100%);
-        }
-        /* Adicione mais regras como esta para mais slides: */
-        /* #slide3:checked ~ .slides-wrapper { transform: translateX(-200%); } */
-        /* #slide4:checked ~ .slides-wrapper { transform: translateX(-300%); } */
+/* Define a transição no wrapper dos slides (geral para todos) */
+.slides-wrapper { /* Mantenha esta regra geral para a transição */
+    transition: transform 0.5s ease-in-out;
+}
+
+/* --- CARROSSEL HERO (Updates de Bem-Estar) --- */
+/* Lógica de mudança de slide */
+#slide1:checked ~ .slides-wrapper-hero { /* Use a classe específica */
+    transform: translateX(0%);
+}
+#slide2:checked ~ .slides-wrapper-hero { /* Use a classe específica */
+    transform: translateX(-100%);
+}
+/* Adicione mais regras como esta para mais slides HERO: */
+/* #slide3:checked ~ .slides-wrapper-hero { transform: translateX(-200%); } */
+
+/* Estiliza o indicador ativo HERO */
+#slide1:checked ~ .carousel-controls-hero label[for="slide1"], /* Use a classe específica */
+#slide2:checked ~ .carousel-controls-hero label[for="slide2"]  /* Use a classe específica */
+/* , #slide3:checked ~ .carousel-controls-hero label[for="slide3"] */
+{
+    background-color: #34d399; /* emerald-400 */
+}
 
 
-        /* Estiliza o indicador ativo */
-        #slide1:checked ~ .carousel-controls label[for="slide1"],
-        #slide2:checked ~ .carousel-controls label[for="slide2"]
-        /* , #slide3:checked ~ .carousel-controls label[for="slide3"] */
-        {
-            background-color: #34d399; /* emerald-400 */
-        }
+/* --- CARROSSEL ESPECIALISTAS --- */
+/* Lógica de mudança de slide */
+#esp-slide1:checked ~ .slides-wrapper-experts { /* Use a classe específica */
+    transform: translateX(0%);
+}
+#esp-slide2:checked ~ .slides-wrapper-experts { /* Use a classe específica */
+    transform: translateX(-100%); /* Move um slide inteiro (que contém 3 cards) */
+}
+/* Adicione mais regras como esta para mais slides de especialistas: */
+/* #esp-slide3:checked ~ .slides-wrapper-experts { transform: translateX(-200%); } */
 
-        /* Fonte padrão e monospace para código/taglines */
-        body {
-            font-family: 'Inter', sans-serif;
-        }
-        .font-code {
-             font-family: 'Source Code Pro', monospace;
-        }
+
+/* Estiliza o indicador ativo ESPECIALISTAS */
+#esp-slide1:checked ~ .carousel-controls-experts label[for="esp-slide1"], /* Use a classe específica */
+#esp-slide2:checked ~ .carousel-controls-experts label[for="esp-slide2"]  /* Use a classe específica */
+/* , #esp-slide3:checked ~ .carousel-controls-experts label[for="esp-slide3"] */
+{
+    background-color: #34d399; /* emerald-400 */
+}
+
+
+/* --- FONTES (Permanecem iguais) --- */
+body {
+    font-family: 'Inter', sans-serif;
+}
+.font-code {
+     font-family: 'Source Code Pro', monospace;
+}

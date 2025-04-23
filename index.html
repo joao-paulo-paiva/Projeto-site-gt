@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Code+Pro:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    
+
 </head>
 <body class="bg-gray-900 text-gray-100">
 
@@ -26,6 +26,7 @@
                 <a href="#backend" class="text-gray-300 hover:text-emerald-400 transition duration-300">🧠 Back-end</a>
                 <a href="#networking" class="text-gray-300 hover:text-emerald-400 transition duration-300">🍻 Networking</a>
                 <a href="#data" class="text-gray-300 hover:text-emerald-400 transition duration-300">📊 /data</a>
+                <a href="#especialistas" class="text-gray-300 hover:text-emerald-400 transition duration-300">🧑‍⚕️ Especialistas</a>
             </div>
             <!-- Botão para menu mobile (requer JS para funcionar de verdade) -->
             <div class="md:hidden">
@@ -40,26 +41,27 @@
              <a href="#backend" class="block text-gray-300 hover:text-emerald-400 transition duration-300">🧠 Back-end</a>
              <a href="#networking" class="block text-gray-300 hover:text-emerald-400 transition duration-300">🍻 Networking</a>
              <a href="#data" class="block text-gray-300 hover:text-emerald-400 transition duration-300">📊 /data</a>
+             <a href="#especialistas" class="block text-gray-300 hover:text-emerald-400 transition duration-300">🧑‍⚕️ Especialistas</a>
         </div>
     </header>
 
     <main>
-        <!-- Seção Carrossel CSS-Only -->
+        <!-- Seção Carrossel CSS-Only (Hero) -->
         <section class="bg-gray-800 py-12 md:py-20">
             <div class="container mx-auto px-6 text-center">
                 <h2 class="text-3xl font-bold mb-8 text-emerald-400">Últimos `Updates` de Bem-Estar</h2>
 
-                <!-- Container do Carrossel -->
+                <!-- Container do Carrossel Hero -->
                 <div class="relative max-w-4xl mx-auto overflow-hidden rounded-lg shadow-xl bg-gray-700">
 
-                    <!-- Inputs de Rádio Escondidos -->
+                    <!-- Inputs de Rádio Escondidos (Grupo 'carousel-slide') -->
                     <input type="radio" name="carousel-slide" id="slide1" class="carousel-radio" checked>
                     <input type="radio" name="carousel-slide" id="slide2" class="carousel-radio">
                     <!-- Adicione mais inputs para mais slides -->
                     <!-- <input type="radio" name="carousel-slide" id="slide3" class="carousel-radio"> -->
 
-                    <!-- Wrapper dos Slides (O que vai se mover) -->
-                    <div class="flex slides-wrapper">
+                    <!-- Wrapper dos Slides Hero (COM CLASSE ESPECÍFICA) -->
+                    <div class="flex slides-wrapper slides-wrapper-hero">
 
                         <!-- Slide 1 -->
                         <div class="w-full flex-shrink-0">
@@ -101,8 +103,8 @@
 
                     </div>
 
-                    <!-- Controles do Carrossel (Labels dos Radios) -->
-                    <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2 carousel-controls">
+                    <!-- Controles do Carrossel Hero (COM CLASSE ESPECÍFICA) -->
+                    <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2 carousel-controls carousel-controls-hero">
                         <label for="slide1" class="block w-3 h-3 bg-gray-500 rounded-full cursor-pointer hover:bg-gray-400 transition-colors duration-300"></label>
                         <label for="slide2" class="block w-3 h-3 bg-gray-500 rounded-full cursor-pointer hover:bg-gray-400 transition-colors duration-300"></label>
                         <!-- Adicione mais labels para mais slides -->
@@ -158,10 +160,10 @@
                                 <code class="bg-gray-700 px-1 rounded text-emerald-300 text-sm">Configurar</code>sua infra física com exercícios e postura para evitar hardware failure (dores!).
                             </li>
                             <li>
-                                Gerenciar os processos mentais para lidar com estresse e burnout (API de saúde mental). 
+                                Gerenciar os processos mentais para lidar com estresse e burnout (API de saúde mental).
                             </li>
                         </ul>
-                        
+
                     </div>
 
                     <!-- Card Networking -->
@@ -187,6 +189,163 @@
                 </div>
             </div>
         </section>
+
+        <!-- Seção Nossos Especialistas -->
+        <section id="especialistas" class="py-16 bg-gray-900">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold text-center mb-4 text-emerald-400">Nossos Especialistas</h2>
+                <p class="text-lg text-gray-300 text-center max-w-3xl mx-auto mb-12">
+                    Reunimos um time de profissionais <code class="bg-gray-700 px-1 rounded text-emerald-300 text-sm">high-level</code> em saúde, fitness e bem-estar, prontos para te ajudar a <code class="bg-gray-700 px-1 rounded text-emerald-300 text-sm">commitar</code> nas suas metas de saúde e aparência, sem <code class="bg-gray-700 px-1 rounded text-emerald-300 text-sm">bugs</code> no processo.
+                </p>
+
+                <!-- Container do Carrossel de Especialistas -->
+                <div class="relative max-w-6xl mx-auto overflow-hidden rounded-lg">
+
+                    <!-- Inputs de Rádio Escondidos (Novo grupo 'especialista-slide') -->
+                    <input type="radio" name="especialista-slide" id="esp-slide1" class="carousel-radio" checked>
+                    <input type="radio" name="especialista-slide" id="esp-slide2" class="carousel-radio">
+                    <!-- Adicione mais inputs para mais slides de especialistas -->
+                    <!-- <input type="radio" name="especialista-slide" id="esp-slide3" class="carousel-radio"> -->
+
+                    <!-- Wrapper dos Slides Experts (COM CLASSE ESPECÍFICA) -->
+                    <div class="flex slides-wrapper slides-wrapper-experts">
+
+                        <!-- Slide 1: Cards 1-3 -->
+                        <div class="w-full flex-shrink-0 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 px-4">
+
+                            <!-- Card Especialista 1 -->
+                            <div class="bg-gray-800 p-6 rounded-lg shadow-lg border border-gray-700 hover:border-emerald-600 transition duration-300 flex flex-col items-center text-center">
+                                <div class="w-32 h-32 rounded-full mb-4 border-2 border-emerald-400 overflow-hidden bg-emerald-500/10">
+                                    <img src="./imagens/Cuidados com a Pele Para Devs.webp" alt="foto" class="w-full h-full object-cover">
+                               </div>
+                                <h3 class="text-xl font-semibold text-white mb-1">Dr. Ana Cecilia</h3>
+                                <p class="text-emerald-300 text-sm mb-4">Médica Clínica / CRM 12345</p>
+                                <p class="text-gray-400 text-sm mb-6">Check-ups gerais, diagnóstico e prevenção de "erros" comuns na saúde do dev.</p>
+                                <div class="mt-auto w-full flex flex-col sm:flex-row justify-center gap-3">
+                                    <a href="mailto:ana.debugger@example.com" class="bg-emerald-500 hover:bg-emerald-600 text-gray-900 font-semibold py-2 px-4 rounded transition duration-300 text-sm w-full sm:w-auto">
+                                        Contato
+                                    </a>
+                                    <a href="#" target="_blank" rel="noopener noreferrer" class="border border-emerald-500 text-emerald-400 hover:bg-emerald-500 hover:text-gray-900 font-semibold py-2 px-4 rounded transition duration-300 text-sm w-full sm:w-auto">
+                                        Saiba Mais
+                                    </a>
+                                </div>
+                            </div>
+
+                            <!-- Card Especialista 2 -->
+                             <div class="bg-gray-800 p-6 rounded-lg shadow-lg border border-gray-700 hover:border-cyan-600 transition duration-300 flex flex-col items-center text-center">
+                                <div class="w-32 h-32 rounded-full mb-4 border-2 border-emerald-400 overflow-hidden bg-emerald-500/10">
+                                    <img src="./imagens/locais menos arriscado para um piercing.webp" alt="foto" class="w-full h-full object-cover">
+                               </div>
+                                <h3 class="text-xl font-semibold text-white mb-1">Prof. Sandra Oliveira</h3>
+                                <p class="text-cyan-300 text-sm mb-4">Personal Trainer / CREF 67890</p>
+                                <p class="text-gray-400 text-sm mb-6">"Merge" de força e flexibilidade para evitar "conflicts" posturais e sedentarismo.</p>
+                                <div class="mt-auto w-full flex flex-col sm:flex-row justify-center gap-3">
+                                     <a href="mailto:carlos.commit@example.com" class="bg-cyan-500 hover:bg-cyan-600 text-gray-900 font-semibold py-2 px-4 rounded transition duration-300 text-sm w-full sm:w-auto">
+                                         Contato
+                                     </a>
+                                     <a href="#" target="_blank" rel="noopener noreferrer" class="border border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-gray-900 font-semibold py-2 px-4 rounded transition duration-300 text-sm w-full sm:w-auto">
+                                         Saiba Mais
+                                     </a>
+                                </div>
+                            </div>
+
+                            <!-- Card Especialista 3 -->
+                            <div class="bg-gray-800 p-6 rounded-lg shadow-lg border border-gray-700 hover:border-violet-600 transition duration-300 flex flex-col items-center text-center">
+                                <div class="w-32 h-32 rounded-full bg-violet-500/20 mb-4 flex items-center justify-center border-2 border-violet-400">
+                                    <span class="text-violet-300 text-sm">(Foto)</span>
+                                </div>
+                                <h3 class="text-xl font-semibold text-white mb-1">Nutri. Juliana Carvalho</h3>
+                                <p class="text-violet-300 text-sm mb-4">Nutricionista / CRN 11235</p>
+                                <p class="text-gray-400 text-sm mb-6">Otimizando sua "stack" nutricional para máximo desempenho e energia constante.</p>
+                                <div class="mt-auto w-full flex flex-col sm:flex-row justify-center gap-3">
+                                     <a href="mailto:laura.log@example.com" class="bg-violet-500 hover:bg-violet-600 text-gray-900 font-semibold py-2 px-4 rounded transition duration-300 text-sm w-full sm:w-auto">
+                                         Contato
+                                     </a>
+                                     <a href="#" target="_blank" rel="noopener noreferrer" class="border border-violet-500 text-violet-400 hover:bg-violet-500 hover:text-gray-900 font-semibold py-2 px-4 rounded transition duration-300 text-sm w-full sm:w-auto">
+                                         Saiba Mais
+                                     </a>
+                                </div>
+                            </div>
+
+                        </div>
+                        <!-- Fim Slide 1 -->
+
+                        <!-- Slide 2: Cards 4-6 -->
+                        <div class="w-full flex-shrink-0 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 px-4">
+
+                             <!-- Card Especialista 4 -->
+                             <div class="bg-gray-800 p-6 rounded-lg shadow-lg border border-gray-700 hover:border-amber-600 transition duration-300 flex flex-col items-center text-center">
+                                <div class="w-32 h-32 rounded-full bg-amber-500/20 mb-4 flex items-center justify-center border-2 border-amber-400">
+                                     <span class="text-amber-300 text-sm">(Foto)</span>
+                                </div>
+                                <h3 class="text-xl font-semibold text-white mb-1">Dr. Ricardo Salim</h3>
+                                <p class="text-amber-300 text-sm mb-4">Fisioterapeuta / CREFITO 81321</p>
+                                <p class="text-gray-400 text-sm mb-6">"Refatorando" sua postura e aliviando dores causadas por longas horas de codificação.</p>
+                                <div class="mt-auto w-full flex flex-col sm:flex-row justify-center gap-3">
+                                     <a href="mailto:ricardo.refactor@example.com" class="bg-amber-500 hover:bg-amber-600 text-gray-900 font-semibold py-2 px-4 rounded transition duration-300 text-sm w-full sm:w-auto">
+                                         Contato
+                                     </a>
+                                     <a href="#" target="_blank" rel="noopener noreferrer" class="border border-amber-500 text-amber-400 hover:bg-amber-500 hover:text-gray-900 font-semibold py-2 px-4 rounded transition duration-300 text-sm w-full sm:w-auto">
+                                         Saiba Mais
+                                     </a>
+                                </div>
+                            </div>
+
+                             <!-- Card Especialista 5 -->
+                             <div class="bg-gray-800 p-6 rounded-lg shadow-lg border border-gray-700 hover:border-pink-600 transition duration-300 flex flex-col items-center text-center">
+                                <div class="w-32 h-32 rounded-full bg-pink-500/20 mb-4 flex items-center justify-center border-2 border-pink-400">
+                                     <span class="text-pink-300 text-sm">(Foto)</span>
+                                </div>
+                                <h3 class="text-xl font-semibold text-white mb-1">Psi. Julia Meireles</h3>
+                                <p class="text-pink-300 text-sm mb-4">Psicóloga / CRP 55891</p>
+                                <p class="text-gray-400 text-sm mb-6">Apoiando sua "interface" mental: lidando com estresse, ansiedade e a síndrome do impostor.</p>
+                                <div class="mt-auto w-full flex flex-col sm:flex-row justify-center gap-3">
+                                     <a href="mailto:julia.interface@example.com" class="bg-pink-500 hover:bg-pink-600 text-gray-900 font-semibold py-2 px-4 rounded transition duration-300 text-sm w-full sm:w-auto">
+                                         Contato
+                                     </a>
+                                     <a href="#" target="_blank" rel="noopener noreferrer" class="border border-pink-500 text-pink-400 hover:bg-pink-500 hover:text-gray-900 font-semibold py-2 px-4 rounded transition duration-300 text-sm w-full sm:w-auto">
+                                         Saiba Mais
+                                     </a>
+                                </div>
+                            </div>
+
+                             <!-- Card Especialista 6 -->
+                             <div class="bg-gray-800 p-6 rounded-lg shadow-lg border border-gray-700 hover:border-lime-600 transition duration-300 flex flex-col items-center text-center">
+                                <div class="w-32 h-32 rounded-full bg-lime-500/20 mb-4 flex items-center justify-center border-2 border-lime-400">
+                                     <span class="text-lime-300 text-sm">(Foto)</span>
+                                </div>
+                                <h3 class="text-xl font-semibold text-white mb-1">Renato Paiva</h3>
+                                <p class="text-lime-300 text-sm mb-4">Barbeiro</p>
+                                <p class="text-gray-400 text-sm mb-6">Dicas para "buildar" um visual autêntico e profissional, da barba ao Cabelo.</p>
+                                <div class="mt-auto w-full flex flex-col sm:flex-row justify-center gap-3">
+                                     <a href="mailto:bruno.build@example.com" class="bg-lime-500 hover:bg-lime-600 text-gray-900 font-semibold py-2 px-4 rounded transition duration-300 text-sm w-full sm:w-auto">
+                                         Contato
+                                     </a>
+                                     <a href="#" target="_blank" rel="noopener noreferrer" class="border border-lime-500 text-lime-400 hover:bg-lime-500 hover:text-gray-900 font-semibold py-2 px-4 rounded transition duration-300 text-sm w-full sm:w-auto">
+                                         Saiba Mais
+                                     </a>
+                                </div>
+                            </div>
+
+                        </div>
+                        <!-- Fim Slide 2 -->
+
+                         <!-- Adicione mais slides (divs com 3 cards cada) aqui -->
+
+                    </div>
+
+                    <!-- Controles do Carrossel Experts (COM CLASSE ESPECÍFICA) -->
+                    <div class="absolute bottom-0 left-1/2 transform -translate-x-1/2 flex space-x-2 carousel-controls carousel-controls-experts">
+                        <label for="esp-slide1" class="block w-3 h-3 bg-gray-600 rounded-full cursor-pointer hover:bg-gray-400 transition-colors duration-300"></label>
+                        <label for="esp-slide2" class="block w-3 h-3 bg-gray-600 rounded-full cursor-pointer hover:bg-gray-400 transition-colors duration-300"></label>
+                        <!-- Adicione mais labels para mais slides -->
+                        <!-- <label for="esp-slide3" class="block w-3 h-3 bg-gray-600 rounded-full cursor-pointer hover:bg-gray-400"></label> -->
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
 
     </main>
 
